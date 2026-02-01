@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Task Manager</h1>
+<div class="add-task">
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <input type="datetime-local" id="dueTime">
+    <button onclick="addTask()">Add</button>
+</div>
+
+
+<script>
+function addTask() {
+    alert("addTask works");
+}
+</script>
+
+</div>
+
+<div class="stats">
+    <div>Total: <span id="total"></span></div>
+    <div>Todo: <span id="todoCount"></span></div>
+    <div>In Progress: <span id="progressCount"></span></div>
+    <div>Done: <span id="doneCount"></span></div>
+    <div>Overdue: <span id="overdueCount"></span></div>
+</div>
+
+<canvas id="taskChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<div class="board">
+    <div class="column">
+        <h2>Todo</h2>
+        <div id="todo"></div>
+    </div>
+
+    <div class="column">
+        <h2>In Progress</h2>
+        <div id="inprogress"></div>
+    </div>
+
+    <div class="column">
+        <h2>Done</h2>
+        <div id="done"></div>
+    </div>
+</div>
+
+<div class="filters">
+    <button onclick="setFilter('all')">All</button>
+    <button onclick="setFilter('today')">Today</button>
+    <button onclick="setFilter('overdue')">Overdue</button>
+    <button onclick="setFilter('done')">Completed</button>
+</div>
+
+
+<script>
+    const tasks = {{ tasks | tojson | safe }};
+</script>
+<script src="/static/script.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

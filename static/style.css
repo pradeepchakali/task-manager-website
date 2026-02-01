@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.add-task input,
+.add-task input[type="datetime-local"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.add-task button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #22c55e;
+    color: #022c22;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.column {
+    width: 280px;
+    background: #020617;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(56,189,248,0.15);
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.task {
+    background: #020617;
+    border-left: 4px solid #38bdf8;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.task.overdue {
+    border-left-color: #ef4444;
+    background: rgba(239,68,68,0.15);
+}
+
+.task small {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.task button {
+    margin-top: 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #38bdf8;
+    color: #020617;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: #020617;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(56,189,248,0.2);
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: #020617;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(56,189,248,0.25);
+    font-weight: 600;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 600px;
+}
+
+#taskChart {
+   
+    border-radius: 10px;
+}
+
+
+
